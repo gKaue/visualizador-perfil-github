@@ -1,4 +1,5 @@
 ## Visualizador de Perfil GitHub
+###### Projeto desenvolvido para praticar JavaScript, consumo de API e manipulação de DOM.
 
 ### Funcionalidade atual
 
