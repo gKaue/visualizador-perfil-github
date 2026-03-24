@@ -19,7 +19,7 @@
         <i class="devicon-github-original"></i>
 
         <section class="container">
-            <header>
+            <header id="search-container">
                 <h2>Buscar Usuário</h2>
                 <p class="search-hint">Digite o nome de usuário do GitHub e tenha acesso aos dados do perfil</p>
                 <input type="text" id="input-search" placeholder="Digite o nome do usuário no GitHub">
@@ -27,9 +27,13 @@
                 <input type="button" value="Buscar" id="btn-search">
             </header>
 
-            <div class="profile-results"></div>
+            <div id="profile-results" class="hide">
+                <!-- TODO: implementar exibição dos dados do perfil do usuário encontrado -->
+            </div>
         </section>
     </main>
+
+    <script src="./src/js/index.js"></script>
 </body>
 
 </html>

@@ -141,6 +141,8 @@ main {
   box-shadow: var(--shadow-sm);
 }
 
-.container .profile-results.hide {
+
+
+.container .hide {
   display: none;
 }
