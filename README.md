@@ -4,7 +4,9 @@
 ### Funcionalidade atual
 
 - Busca dados do perfil de um usuário do GitHub via API pública.
-- Os dados retornados ainda não são exibidos na interface, apenas no console do navegador
+- Exibição dos dados do perfil na interface do usuário.
+- Exibição de dados á respeito de repositórios do usuário.
+- Exibição das linguagens mais utilizadas pelo usuário em formato de gráfico.
 
 ### Endpoint utilizado
 
@@ -12,4 +14,6 @@
 
 ### Em desenvolvimento
 
-- Implementação da exibição dos dados do perfil na interface do usuário.
+- TODO: Exibir indicador de carregamento durante requisição;
+- TODO: Aprimorar responsividade;
+- TODO: Adicionar animações suaves;
