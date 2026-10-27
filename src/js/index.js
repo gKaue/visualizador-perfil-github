@@ -11,14 +11,14 @@ const BASE_URL = 'https://api.github.com';
 
 const searchUser = async (username) => {
     try {
-        const response = await fetch (`${BASE_URL}/users/${username}`);
-        if (!response.ok){
+        const response = await fetch(`${BASE_URL}/users/${username}`);
+        if (!response.ok) {
             throw new Error('Usuário não encontrado. Por favor, verifique o nome de usuário e tente novamente.');
             return;
         }
         const data = await response.json();
 
-        const reposResponse = await fetch (`${BASE_URL}/users/${username}/repos?sort=created&direction=desc&per_page=10`);
+        const reposResponse = await fetch(`${BASE_URL}/users/${username}/repos?sort=created&direction=desc&per_page=10`);
         if (!reposResponse.ok) {
             throw new Error('Erro ao buscar repositórios do usuário. Por favor, tente novamente mais tarde.');
             return;
@@ -51,9 +51,8 @@ const searchUser = async (username) => {
             <div id="repos-container">
                 <h2>Repositórios Recentes:</h2>
                 <div id="repos-list">
-                    ${
-                        reposData.length > 0
-                        ? reposData.map(repo => `
+                    ${reposData.length > 0
+                ? reposData.map(repo => `
                             <div class="repo-item">
                                 <a href="${repo.html_url}" target="_blank" class="repo-name">${repo.name}</a>
                                 <p class="repo-description">${repo.description || 'Sem descrição disponível.'}</p>
@@ -66,8 +65,8 @@ const searchUser = async (username) => {
                                 </div>
                             </div>
                         `).join('')
-                        : '<p>Nenhum repositório encontrado.</p>'
-                    }
+                : '<p>Nenhum repositório encontrado.</p>'
+            }
                 </div>
             </div>
         `;
@@ -127,6 +126,6 @@ btnSearch.addEventListener('click', (e) => {
     if (inputValue) {
         searchUser(inputValue);
     } else {
-        alert ('Por favor, digite o nome de um usuário do GitHub para buscar.');
+        alert('Por favor, digite o nome de um usuário do GitHub para buscar.');
     }
 });
